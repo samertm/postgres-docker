@@ -12,8 +12,11 @@ appropriate values. Do the same in `init-db.sh` with `DB_USER` and
 
 Then call `make docker-build` to build the Docker container, and `make
 run-dev` to run the Docker container locally and publish port 5432.
+Run `make run-prod` to run the Docker container without exposing any
+ports, so you can link to it with your production app.
 
-Connect to the Docker container with `psql -h localhost -U <DB_USER>`.
+Connect to the development Docker container with `psql -h localhost -U
+<DB_USER>`.
 
 ### Make Commands
 
